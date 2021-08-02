@@ -3,16 +3,20 @@ import Users from './Components/Users/Users';
 
 function App() {
   return (
-    <div className="App">
+    <BrowserRouter>
+
       <header className="App-header">
         <p>
           Mi proyecto
         </p>
       </header>
-      <div>
-          <Users></Users>
-      </div>
-    </div>
+
+      <Switch>
+        <Route path="/" component={Users} exact />
+        <Route path="/UserDetails" component={UserDetails} exact />
+      </Switch>
+
+    </BrowserRouter>
   );
 }
 
